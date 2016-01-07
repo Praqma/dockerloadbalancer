@@ -1,0 +1,16 @@
+app:
+  build: app
+  links:
+    - redis
+haproxy:
+  image: tutum/haproxy
+  links:
+    - app
+redis:
+  image: redis
+nginx:
+  build: nginx
+  ports:
+    - "80:80"
+  links:
+    - haproxy
