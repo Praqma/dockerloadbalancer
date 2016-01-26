@@ -8,7 +8,7 @@ docker-compose scale app=2
 docker-compose up -d
 
 # Display four page loads
-sleep 2
+sleep 5
 curl localhost
 curl localhost
 curl localhost
@@ -19,7 +19,7 @@ docker-compose scale app=4
 docker-compose up  --force-recreate -d
 
 # Display four page loads
-sleep 2
+sleep 5
 curl localhost
 curl localhost
 curl localhost
